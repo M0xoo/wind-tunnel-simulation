@@ -1,4 +1,4 @@
-export const MODEL_PATH = '/meshy.glb'
+export const MODEL_PATH = `${import.meta.env.BASE_URL}meshy.glb`
 
 export const MODEL_ROTATION = [0, Math.PI / 2, 0]
 
