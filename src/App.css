@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #0a0a0f;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #ddd;
+}
+
+.scene-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* ── Control panel ────────────────────────── */
+
+.controls {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(10, 10, 20, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 220px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+
+.controls h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #8af;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.controls label span {
+  opacity: 0.75;
+}
+
+.controls input[type='range'] {
+  accent-color: #5af;
+  width: 100%;
+}
+
+.controls .toggle {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.controls .toggle input {
+  accent-color: #5af;
+}
+
+.controls .divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Bike list ────────────────────────────── */
+
+.bike-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bike-item {
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+
+.bike-item.selected {
+  border-color: rgba(85, 170, 255, 0.55);
+  background: rgba(85, 170, 255, 0.1);
+}
+
+.bike-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.bike-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bike-label {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.bike-metric {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #f66;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.remove-btn:hover {
+  opacity: 1;
+}
+
+.add-btn {
+  background: rgba(85, 170, 255, 0.12);
+  border: 1px solid rgba(85, 170, 255, 0.25);
+  color: #8cf;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.add-btn:hover {
+  background: rgba(85, 170, 255, 0.22);
+}
