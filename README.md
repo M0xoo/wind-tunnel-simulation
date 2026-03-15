@@ -1,6 +1,6 @@
 # Wind Tunnel Simulation (React Three Fiber)
 
-Interactive cycling draft simulation built with React, Vite, and React Three Fiber.
+Interactive cycling draft simulation built with  React Three Fiber.
 
 ## Live DEMO: https://m0xoo.github.io/wind-tunnel-simulation/
 
